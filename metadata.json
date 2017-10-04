@@ -1,0 +1,27 @@
+{
+  "name": "kleysonr-pentaho",
+  "version": "0.0.1",
+  "author": "Kleyson Rios",
+  "summary": "A puppet module to install and configure a new Pentaho server",
+  "license": "MPL-2.0",
+  "source": "https://github.com/kleysonr/puppet-pentaho",
+  "project_page": "https://github.com/kleysonr/puppet-pentaho",
+  "issues_url": "https://github.com/kleysonr/puppet-pentaho/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.20.0 < 5.0.0"}
+  ],
+  "data_provider": "hiera",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "16.04" ]
+    }
+  ]  
+}
+

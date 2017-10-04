@@ -1,0 +1,9 @@
+---
+pentaho::params::dist: 'ce'
+pentaho::params::version: '7.1.0'
+pentaho::params::source: 'puppet:///modules/pentaho/software/pentaho-server-ce-7.1.0.0-12.zip'
+pentaho::params::user: 'pentaho'
+pentaho::params::group: 'pentaho'
+pentaho::params::home: '/opt/pentaho'
+pentaho::params::backup: true
+pentaho::params::tmptemplatedir: '/tmp/pentaho_template'

@@ -1,0 +1,27 @@
+---
+version: 5
+defaults:  # Used for any hierarchy level that omits these keys.
+  datadir: data         # This path is relative to hiera.yaml's directory.
+  data_hash: yaml_data  # Use the built-in YAML backend.
+
+hierarchy:
+  - name: "Per distribution / version / host and pentaho environment"
+    path: "fs/%{pentaho::dist}/%{pentaho::version}/%{fqdn}/%{::pentaho_env}.yaml"
+
+  - name: "Per distribution / version and pentaho environment"
+    path: "fs/%{pentaho::dist}/%{pentaho::version}/%{::pentaho_env}.yaml"
+
+  - name: "Per distribution / version and host"
+    path: "fs/%{pentaho::dist}/%{pentaho::version}/%{fqdn}.yaml"
+
+  - name: "Per distribution and version"
+    path: "fs/%{pentaho::dist}/%{pentaho::version}.yaml"
+
+  - name: "Per distribution"
+    path: "fs/%{pentaho::dist}.yaml"
+
+  - name: "Across all environments"
+    path: "fs/general.yaml"
+
+  - name: "Pentaho Module configuration"
+    path: "pentaho.yaml"
