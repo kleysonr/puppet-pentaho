@@ -10,6 +10,7 @@
        * [Customize deploy options](#customize-deploy-options)
 1. [Usage](#usage)
     * [Copying and 'templating' files](#copying-and-templating-files)
+    * [Token files](#token-files)
     * [Sample](#sample)
 1. [Reference](#reference)
 1. [Limitations](#limitations)
@@ -127,7 +128,7 @@ The **pentaho-server/tomcat/webapps/pentaho/META-INF/context.xml** could be toke
 ```
 During the building process, the tokens for the **username**, **password**, **url**, **driverClassName** and **validationQuery** will be replaced by values relative to the server being installed.
 
-### Tokens definition files
+### Token files
 
 The Hiera scan the definition files on the following order and the .yaml files must be stored under the **/etc/puppetlabs/code/environments/production/modules/pentaho/data/fs** folder.
 
