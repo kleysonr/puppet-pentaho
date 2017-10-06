@@ -15,9 +15,9 @@ This sample shows how to use the Pentaho puppet module to deploy a Pentaho CE 7.
 ## Installing the Puppet servers
 
  - Install an Ubuntu 16.04 server to role as the puppet-master and configure the network properly.
- - As root, run the the [install_puppetserver_ubuntu_1604.sh](https://raw.githubusercontent.com/kleysonr/puppet-pentaho/sample_ce_7.1.0/install_puppetserver_ubuntu_1604.sh) script to configure and install the puppet-server software.
+ - As root, run the [install_puppetserver_ubuntu_1604.sh](https://raw.githubusercontent.com/kleysonr/puppet-pentaho/sample_ce_7.1.0/install_puppetserver_ubuntu_1604.sh) script to configure and install the puppet-server software.
  - Install an Ubuntu 16.04 server to role as the puppet-agent and configure the network properly.
- - As root, run the the [install_puppetagent_ubuntu_1604.sh](https://raw.githubusercontent.com/kleysonr/puppet-pentaho/sample_ce_7.1.0/install_puppetagent_ubuntu_1604.sh) script to configure and install the puppet-agent software.
+ - As root, run the [install_puppetagent_ubuntu_1604.sh](https://raw.githubusercontent.com/kleysonr/puppet-pentaho/sample_ce_7.1.0/install_puppetagent_ubuntu_1604.sh) script to configure and install the puppet-agent software.
 
 ## Configuring the sample
 
@@ -39,17 +39,21 @@ On the puppet-agent **(as root)**:
 
 - Export the **FACTER_PENTAHO_ENV** variable to deploy the Pentaho on the **DEV** environment, and re-run the command to deploy
 >export FACTER_PENTAHO_ENV=dev
+> 
 >puppet agent --onetime --no-daemonize --version
 
 - Export the **FACTER_PENTAHO_ENV** variable to deploy the Pentaho on the **PROD** environment, and re-run the command to deploy
 >export FACTER_PENTAHO_ENV=prod
+> 
 >puppet agent --onetime --no-daemonize --version
 
 ## Validation
 
 Compare the following files among all the executions to check the differences:
 >/opt/pentaho/README-PUPPET.txt
+> 
 >/opt/pentaho/pentaho-server/start-pentaho.sh
+> 
 >/opt/pentaho/pentaho-server/tomcat/webapps/pentaho/META-INF/context.xml
 
 And verify that the new JDBC driver for postgres was deployed to all the environments.
