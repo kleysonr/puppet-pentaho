@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/pentaho" docbase="webapps/pentaho/">
+	<Resource name="jdbc/Hibernate" auth="Container" type="javax.sql.DataSource"
+	  factory="org.apache.commons.dbcp.BasicDataSourceFactory" maxTotal="20" maxIdle="5"
+	  maxWaitMillis="10000" 
+	  username="<%= scope().call_function('lookup',['pentaho::hibernate-jdbc-username']) %>" 
+	  password="<%= scope().call_function('lookup',['pentaho::hibernate-jdbc-password']) %>"
+	  url="<%= scope().call_function('lookup',['pentaho::hibernate-jdbc-url']) %>"
+	  driverClassName="<%= scope().call_function('lookup',['pentaho::hibernate-jdbc-driver']) %>" 
+	  validationQuery="<%= scope().call_function('lookup',['pentaho::hibernate-jdbc-query']) %>" />
+		
+	<Resource name="jdbc/Quartz" auth="Container" type="javax.sql.DataSource"
+	  factory="org.apache.commons.dbcp.BasicDataSourceFactory" maxTotal="20" maxIdle="5"
+	  maxWaitMillis="10000" 
+	  username="<%= scope().call_function('lookup',['pentaho::quartz-jdbc-username']) %>" 
+	  password="<%= scope().call_function('lookup',['pentaho::quartz-jdbc-password']) %>"
+	  url="<%= scope().call_function('lookup',['pentaho::quartz-jdbc-url']) %>"
+	  driverClassName="<%= scope().call_function('lookup',['pentaho::quartz-jdbc-driver']) %>" 
+	  validationQuery="<%= scope().call_function('lookup',['pentaho::quartz-jdbc-query']) %>"/>
+
+</Context>

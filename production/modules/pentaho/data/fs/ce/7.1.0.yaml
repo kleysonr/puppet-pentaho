@@ -1,0 +1,13 @@
+---
+pentaho::hibernate-jdbc-url: jdbc:hsqldb:hsql://localhost/hibernate
+pentaho::hibernate-jdbc-driver: org.hsqldb.jdbcDriver
+pentaho::hibernate-jdbc-username: hibuser
+pentaho::hibernate-jdbc-password: password
+pentaho::hibernate-jdbc-query: select count(*) from INFORMATION_SCHEMA.SYSTEM_SEQUENCES
+
+pentaho::quartz-jdbc-url: jdbc:hsqldb:hsql://localhost/quartz
+pentaho::quartz-jdbc-driver: org.hsqldb.jdbcDriver
+pentaho::quartz-jdbc-username: pentaho_user
+pentaho::quartz-jdbc-password: password
+pentaho::quartz-jdbc-query: select count(*) from INFORMATION_SCHEMA.SYSTEM_SEQUENCES
+

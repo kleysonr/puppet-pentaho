@@ -1,0 +1,12 @@
+---
+pentaho::hibernate-jdbc-url: jdbc:postgresql://dev-db.mycompany.com:5432/hibernate
+pentaho::hibernate-jdbc-driver: org.postgresql.Driver
+pentaho::hibernate-jdbc-username: hibuser
+pentaho::hibernate-jdbc-password: password
+pentaho::hibernate-jdbc-query: select 1
+
+pentaho::quartz-jdbc-url: jdbc:postgresql://dev-db.mycompany.com:5432/quartz
+pentaho::quartz-jdbc-driver: org.postgresql.Driver
+pentaho::quartz-jdbc-username: pentaho_user
+pentaho::quartz-jdbc-password: password
+pentaho::quartz-jdbc-query: select 1
